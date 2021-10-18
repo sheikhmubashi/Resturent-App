@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar';
 import useResult from '../hooks/useResult';
 import ResultsList from '../components/ResultsList';
 
-const SearchScreen = ({ navigation }) => {
+const SearchScreen = () => {
   const [term, setTerm] = useState('');
   const [searchApi, results, errorMassage] = useResult();
 
@@ -20,9 +20,9 @@ const SearchScreen = ({ navigation }) => {
       <SearchBar term={term} onTermChange={setTerm} onTermSubmit={() => searchApi(term)} />
       {errorMassage ? <Text>{errorMassage}</Text> : null}
       <ScrollView>
-        <ResultsList results={filterResultsByPrice('$')} title='Cost Effective' navigation={navigation} />
-        <ResultsList results={filterResultsByPrice('$$')} title='Bit Pricer' navigation={navigation} />
-        <ResultsList results={filterResultsByPrice('$$$')} title='Big Spender' navigation={navigation} />
+        <ResultsList results={filterResultsByPrice('$')} title='Cost Effective'/>
+        <ResultsList results={filterResultsByPrice('$$')} title='Bit Pricer'/>
+        <ResultsList results={filterResultsByPrice('$$$')} title='Big Spender'/>
       </ScrollView>
     </>
   );
