@@ -3,7 +3,7 @@ import { Text, View, StyleSheet } from 'react-native';
 
 const ShowResultsScreen = () => {
     return (
-        <View><Text>REsult Show screen </Text></View>
+        <View><Text>Result Show screen </Text></View>
     )
 }
 

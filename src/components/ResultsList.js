@@ -1,18 +1,22 @@
 import React from 'react';
-import { Text, View, StyleSheet, FlatList } from 'react-native'
+import { Text, View, StyleSheet, FlatList, TouchableOpacity } from 'react-native'
 import ResultDetails from './ResultDeatils';
 
 
-const ResultsList = ({ title, results }) => {
+const ResultsList = ({ title, results, navigation }) => {
     return <View style={styles.conatiner}>
         <Text style={styles.title}>{title}</Text>
         <FlatList
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             data={results}
-            keyExtractor={(result) => {return result.id }}
+            keyExtractor={(result) => { return result.id }}
             renderItem={({ item }) => {
-                return <ResultDetails result={item}/>
+                return (
+                    <TouchableOpacity onPress={()=>{navigation.navigate('Result')}}>
+                        <ResultDetails result={item} />
+                    </TouchableOpacity>
+                )
             }}
         />
     </View>
