@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         fontWeight: 'bold',
-        marginLeft: 15,
+        marginLeft: 16,
     },
     conatiner: {
         marginBottom: 10,
