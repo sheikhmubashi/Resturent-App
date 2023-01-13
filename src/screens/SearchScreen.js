@@ -12,7 +12,7 @@ const SearchScreen = () => {
     return results.filter(result => {
       return result.price === price;
     })
-  }
+  } 
 
 
   return (
