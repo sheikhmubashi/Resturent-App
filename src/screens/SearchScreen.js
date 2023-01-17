@@ -20,6 +20,7 @@ const SearchScreen = () => {
       <SearchBar term={term} onTermChange={setTerm} onTermSubmit={() => searchApi(term)} />
       {errorMassage ? <Text>{errorMassage}</Text> : null}
       <ScrollView>
+        
         <ResultsList results={filterResultsByPrice('$')} title='Cost Effective' />
         <ResultsList results={filterResultsByPrice('$$')} title='Bit Pricer' />
         <ResultsList results={filterResultsByPrice('$$$')} title='Big Spender' />
