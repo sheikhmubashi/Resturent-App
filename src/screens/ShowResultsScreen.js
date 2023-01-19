@@ -30,8 +30,8 @@ const ShowResultsScreen = ({ navigation }) => {
                 }}
             /> 
         </View>
-    ) 
-} 
+    )
+}
  
 const styles = StyleSheet.create({
     image: {
