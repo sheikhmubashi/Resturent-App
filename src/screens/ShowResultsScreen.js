@@ -28,11 +28,11 @@ const ShowResultsScreen = ({ navigation }) => {
                 renderItem={({ item }) => {
                     return <Image style={styles.image} source={{ uri: item }} />
                 }}
-            />
+            /> 
         </View>
-    )
-}
-
+    ) 
+} 
+ 
 const styles = StyleSheet.create({
     image: {
         width: 200,
