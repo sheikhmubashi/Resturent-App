@@ -17,9 +17,9 @@ const ShowResultsScreen = ({ navigation }) => {
         getResult(id)
     }, [])
 
-    if (!result) { 
+    if (!result) {
         return null;
-    } 
+    }
     return (
         <View><Text>{result.name}</Text>
             <FlatList
