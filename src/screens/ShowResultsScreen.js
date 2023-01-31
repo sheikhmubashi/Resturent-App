@@ -10,7 +10,7 @@ const ShowResultsScreen = ({ navigation }) => {
     console.log(result);
     const getResult = async (id) => {  
         const response = await yelp.get(`/${id}`)
-        setResult(response.data);
+        setResult(response.data); 
     } 
 
     useEffect(() => {
@@ -36,7 +36,7 @@ const ShowResultsScreen = ({ navigation }) => {
  
 const styles = StyleSheet.create({
     image: {
-        width: 200,
+        width: 200, 
         height: 300,
     }
 })
