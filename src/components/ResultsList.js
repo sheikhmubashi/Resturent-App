@@ -6,11 +6,11 @@ import { withNavigation } from 'react-navigation';
 const ResultsList = ({ title, results, navigation }) => {
     if (!results.length) {
         return null;
-    }
+    } 
     return <View style={styles.conatiner}>
         <Text style={styles.title}>{title}</Text>
         <FlatList
-            horizontal={true}
+            horizontal={true} 
             showsHorizontalScrollIndicator={false}
             data={results}
             keyExtractor={(result) => { return result.id }}
